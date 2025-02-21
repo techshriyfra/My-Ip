@@ -7,12 +7,12 @@ import ipinfo
 import aiohttp
 
 # Replace with your actual IPinfo and ipstack API access tokens
-ipinfo_token = 'a6f88e599f7e36'
+ipinfo_token = os.getenv("IPINFO_TOKEN")
 handler = ipinfo.getHandler(ipinfo_token)
-ipstack_api_key = '220e45d1a00539752f4b9f37c53b2c19'
+ipstack_api_key = os.getenv("IPSTACK_API_KEY")
 
 # Replace with your actual Telegram bot token
-bot_token = '7791892519:AAF07EHEO-9eS10_5nWcaWYAq0jUVzU_WZ0'
+bot_token = os.getenv("BOT_TOKEN")
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
